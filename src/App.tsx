@@ -13,9 +13,7 @@ function App() {
       <main>
         <SidebarTrigger />
         <SearchBar />
-        <div className="mt-1">
         <CamSec />
-        </div>
       </main>
     </SidebarProvider>
   )
