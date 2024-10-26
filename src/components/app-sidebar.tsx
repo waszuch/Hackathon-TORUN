@@ -1,4 +1,5 @@
 import { Calendar, Home } from "lucide-react"
+import { Link } from "react-router-dom"
 
 import {
   Sidebar,
@@ -11,21 +12,17 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
-// Menu items.
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/",
     icon: Home,
   },
- 
   {
     title: "Panel-info",
-    url: "#",
+    url: "/panel-info",
     icon: Calendar,
   },
- 
-  
 ]
 
 export function AppSidebar() {
@@ -39,10 +36,10 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <Link to={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

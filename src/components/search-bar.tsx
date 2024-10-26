@@ -3,6 +3,7 @@ import { BiSearch } from "react-icons/bi";
 import { BiCurrentLocation } from "react-icons/bi";
 import { useState } from "react";
 
+
 export function SearchBar() {
   const [inputValue, setInputValue] = useState("");
 
