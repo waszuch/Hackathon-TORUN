@@ -5,6 +5,7 @@ import './style.css'
 import { CamSec } from "./components/cam-sec"
 import { SearchBar } from "./components/search-bar"
 import { ModeToggle } from './components/mode-toggle';
+import ReportCounter from "./components/report-counter"
 
 function App() {
   return (
@@ -18,10 +19,10 @@ function App() {
           <SidebarTrigger />
           <SearchBar />
           <CamSec />
+          <ReportCounter count={0} />
         </main>
       </SidebarProvider>
     </ThemeProvider>
   )
 }
-
 export default App

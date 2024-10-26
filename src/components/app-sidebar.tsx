@@ -18,26 +18,14 @@ const items = [
     url: "#",
     icon: Home,
   },
+ 
   {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
-  },
-  {
-    title: "Calendar",
+    title: "Panel-info",
     url: "#",
     icon: Calendar,
   },
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
-  },
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
-  },
+ 
+  
 ]
 
 export function AppSidebar() {
