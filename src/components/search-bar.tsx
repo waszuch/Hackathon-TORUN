@@ -13,7 +13,7 @@ export function SearchBar({ onLocationConfirmed }: { onLocationConfirmed: (confi
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ message: 'Location confirmed' }),
+        // Usunięto body z żądania GET
       });
       if (!response.ok) {
         throw new Error('Failed to send email');
