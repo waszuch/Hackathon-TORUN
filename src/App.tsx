@@ -6,11 +6,13 @@ import './style.css'
 import { CamSec } from "./components/cam-sec"
 import { SearchBar } from "./components/search-bar"
 import { ModeToggle } from './components/mode-toggle'
-import ReportCounter from "./components/report-counter"
 import Header from "./components/header"
 import { PanelInfo } from "./components/panel-info"
+import { useState } from "react"
 
 function App() {
+  const [showCamSec, setShowCamSec] = useState(false)
+
   return (
     <Router>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
@@ -20,14 +22,14 @@ function App() {
         <SidebarProvider>
           <AppSidebar />
           <main >
+            
             <Header />
             <SidebarTrigger />
             <Routes>
               <Route path="/" element={
                 <>
-                  <SearchBar />
-                  <CamSec />
-                  <ReportCounter count={0} />
+                  <SearchBar onLocationConfirmed={setShowCamSec} />
+                  {showCamSec && <CamSec />}
                 </>
               } />
               <Route path="/panel-info" element={<PanelInfo />} />

@@ -1,6 +1,7 @@
 export default function Header() {
   return (
-    <div className="w-full flex justify-center">
+
+    <div className="w-full flex justify-center items-center h-24">
       <h1 className="font-bold text-2xl">CSAP</h1>
     </div>
   );
