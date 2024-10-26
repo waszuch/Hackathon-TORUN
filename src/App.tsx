@@ -6,6 +6,7 @@ import { CamSec } from "./components/cam-sec"
 import { SearchBar } from "./components/search-bar"
 import { ModeToggle } from './components/mode-toggle';
 import ReportCounter from "./components/report-counter"
+import Header from "./components/header"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <SidebarProvider>
         <AppSidebar />
         <main>
+          <Header />
           <SidebarTrigger />
           <SearchBar />
           <CamSec />
